@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비만 설문</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="survey-container">
+        <h1>비만 설문</h1>
+        <form id="obesity-survey">
+            <div class="form-group">
+                <label>1. 체중 증가로 인해 건강에 문제가 있다고 느낀다.</label>
+                <div class="rating">
+                    <input type="radio" name="q1" value="1" required> 전혀 아니다
+                    <input type="radio" name="q1" value="2"> 아니다
+                    <input type="radio" name="q1" value="3"> 보통이다
+                    <input type="radio" name="q1" value="4"> 그렇다
+                    <input type="radio" name="q1" value="5"> 매우 그렇다
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>2. BMI(체질량지수) *</label>
+                <div>
+                    <input type="number" id="weight" placeholder="몸무게(kg)" required>
+                    <input type="number" id="height" placeholder="키(cm)" required>
+                    <button type="button" onclick="calculateBMI()">BMI 계산</button>
+                </div>
+                <div id="bmi-score" class="result">BMI 수치: -</div>
+            </div>
+            
+            <div class="form-group">
+                <label>3. 복부 비만이 심해 옷을 입을 때 불편함을 느낀다.</label>
+                <div class="rating">
+                    <input type="radio" name="q3" value="1" required> 전혀 아니다
+                    <input type="radio" name="q3" value="2"> 아니다
+                    <input type="radio" name="q3" value="3"> 보통이다
+                    <input type="radio" name="q3" value="4"> 그렇다
+                    <input type="radio" name="q3" value="5"> 매우 그렇다
+                </div>
+            </div>
+            
+            <!-- 항목 4~10 생략, 위와 동일한 구조로 추가 -->
+            
+            <button type="submit">제출</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

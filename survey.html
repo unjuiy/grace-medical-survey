@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>설문 페이지</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="survey-container">
+        <h1>진료 설문</h1>
+        <form>
+            <div class="form-group">
+                <label for="name">성명</label>
+                <input type="text" id="name" name="name" placeholder="성명을 입력하세요" required>
+            </div>
+            <div class="form-group">
+                <label for="dob-year">생년월일</label>
+                <div class="dob-group">
+                    <select id="dob-year" name="dob-year" required>
+                        <option value="">연도</option>
+                    </select>
+                    <select id="dob-month" name="dob-month" required>
+                        <option value="">월</option>
+                    </select>
+                    <select id="dob-day" name="dob-day" required>
+                        <option value="">일</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+        <h2>진료과목 선택</h2>
+        <div class="departments">
+            <div class="department" onclick="navigateTo('obesity.html')">비만</div>
+            <div class="department" onclick="navigateTo('pain.html')">통증</div>
+            <div class="department" onclick="navigateTo('hairloss.html')">탈모</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
